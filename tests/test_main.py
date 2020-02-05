@@ -3,7 +3,7 @@ import time
 import pytest
 
 import basket.__main__ as main
-from basket import SimpleLogger 
+from basket.__main__ import SimpleLogger 
 
 
 @pytest.fixture
