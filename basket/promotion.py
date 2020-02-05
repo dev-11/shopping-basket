@@ -21,6 +21,6 @@ class Promotion:
         self.qualifying_product = promo_def['qualifying_product'].lower()
         self.qualifying_qty = int(promo_def['qualifying_qty'])
         if not self.qualifying_qty:
-            raise KeyError('Unacceptable value for qualifying_qty')
+            raise ValueError('Unacceptable value for qualifying_qty')
         self.discounted_product = promo_def['discounted_product'].lower()
         self.discount_percent = float(promo_def['discount_percent'])
