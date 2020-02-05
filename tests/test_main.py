@@ -3,6 +3,7 @@ import time
 import pytest
 
 import basket.__main__ as main
+from basket import SimpleLogger 
 
 
 @pytest.fixture
@@ -149,7 +150,7 @@ def test_log(capsys):
 
 def test_log_error(capsys):
     main.LOGGING = True
-    main.logger.log('foo', level=main.ERROR)
+    main.logger.log('foo', level=SimpleLogger.error)
     stdout, _ = capsys.readouterr()
     assert 'ERROR: foo' in stdout
 
